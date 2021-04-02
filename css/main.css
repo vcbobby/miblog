@@ -4,3 +4,143 @@
     --contact-inf: #6BA4ED;
     --footer: #66E3BA;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* position: fixed; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    position: fixed;
+    font-size: 1.6rem;
+    display: grid;
+    width: 100%;
+    height: 730px;
+    grid-template-rows: 130px 500px 80px;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50px 80px;
+}
+
+.red-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    background-color: var(--nav);
+}
+
+.social a {
+    padding: 0 2px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.social .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.social .icon:hover {
+    width: 25px;
+    height: 25px
+}
+
+.logo a img {
+    width:  40px;
+    height: 40px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 40px;
+    margin: 0;
+}
+
+.profile a {
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: url('../assets/imgs/blogger.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .main-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-section h2 {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-block-end: 30px;
+}
+
+.main-section .button {
+    width: 100px;
+    height: 50px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-left: 7px;
+    font-weight: 400;
+    font-size: 2.1rem;
+    margin: 0 auto;
+    background-color: var(--contact-inf);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 2.2rem;
+}
+
+.button:hover {
+    background-color: var(--bottoms);
+    color: var(--contact-inf);
+    font-size: 2.3rem;
+}
