@@ -1,0 +1,18 @@
+{
+  "name": "blog-personal-maquetacion",
+  "version": "0.1.0",
+  "description": "Maquetacion de blog personal",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "keywords": [
+    "maquetacion",
+    "blog"
+  ],
+  "author": "Víctor <castillovictor2461@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
