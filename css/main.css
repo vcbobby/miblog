@@ -180,7 +180,7 @@ h1 {
     font-size: 1.6rem;
     display: grid;
     min-height: 530px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 .blogs-main--news {
@@ -229,12 +229,82 @@ h1 {
     color: black;
 }
 
+/* Blogs section 2 */
 
+.blogs-h2 {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    margin: 10px;
+    height: 10vh;
+}
 
+.blogs-h2 hr {
+    margin: 0 auto;
+    margin-top: 10px;
+    color: rgb(218, 212, 212);
+    width: 80%;
+}
 
+.blogs--article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px 5px;
+}
+
+.blogs--anchor img {
+    width: 290px;
+    height: 150px;
+}
+
+.blogs--h3 {
+    padding: 15px 0;
+}
+
+.blogs--p {
+    max-width: 600px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.blogs--read-more p {
+    text-align: center;
+    padding-top: 3px;
+    border: 2px solid var(--bottoms);
+    width: 120px;
+    height: 40px;
+    place-content: center;
+    padding: 5px 0 0 0;
+}
+
+.blogs--read-more  {
+    margin-block-start: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Footer */
+
+.footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: grey;
+    background-color: var(--footer);
+    width: 100%;
+    min-height: 60px;
+    border-top: 20px solid var(--nav);
+    text-align: center;
+}
+
+.footer p {
+    margin-top: 10px;
+}
 
 /* MEDIA QUERY */
 
+/* main de blogs */
 @media (min-width: 500px) {
     .blogs-main--news p {
         text-align: center;
@@ -243,7 +313,20 @@ h1 {
     }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 650px) {
+     /* Blogs section 2 */
+
+    .blogs-main {
+        grid-template-rows: 1fr 2.5fr;
+    }
+
+    .blogs-main--section {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+    }
+}
+
+@media (min-width: 980px) {
     .blogs-main--news {
         display: grid;
         grid-template: 30px 300px / 1fr 5fr 5fr 1fr ;
@@ -306,5 +389,11 @@ h1 {
     .blogs-main--news .read-more a {
         text-decoration: none;
         color: black;
+    }
+
+    .blogs-main--section {
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        width: 100%;
     }
 }
