@@ -26,7 +26,6 @@ html {
 .container-home {
     position: fixed;
     font-size: 1.6rem;
-    display: grid;
     width: 100%;
     height: 730px;
     grid-template-rows: 130px 500px 80px;
@@ -117,32 +116,42 @@ h1 {
 /* MAIN DEL HOME */
 
 .main {
+    position: relative;
     grid-area: main;
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 4fr 1fr;
     width: 100%;
     height: 100vh;
-    background: url('../assets/imgs/blogger.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     justify-content: center;
     align-items: center;
 }
 
+.main img {
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    grid-column: 1 / 4;
+    max-width: 800px;
+}
+
 .main .main-section {
+    position: absolute;
     display: grid;
     grid-column: 2;
     justify-content: center;
     flex-direction: column;
+    align-content: center;
+    top: 30%;
 }
 
 .main-section h2 {
+    max-width: 600px;
     font-size: 3rem;
     letter-spacing: 10px;
     color: white;
     text-align: center;
     margin-block-end: 30px;
+    z-index: 2;
 }
 
 .main-section .button {
@@ -160,7 +169,7 @@ h1 {
     border: none;
     border-radius: 6px;
     font-size: 2.2rem;
-    margin-block-end: 100px;
+    z-index: 3;
 }
 
 .button:hover {
