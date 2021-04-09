@@ -2,9 +2,6 @@ const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const copyPlugin = require('copy-webpack-plugin')
-const cssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const terserPlugin = require('terser-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -13,7 +10,8 @@ module.exports = {
         filename: '[name].[contenthash].js',
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
-    mode: 'production',
+    mode: 'development',
+    mwatch: true,
     resolve: {
         extensions: ['.js'],
         alias: {
@@ -94,14 +92,6 @@ module.exports = {
                     to: "assets/icons"
                 },
             ]
-        }),
-        new CleanWebpackPlugin(),
+        })
     ],
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new cssMinimizerPlugin(),
-            new terserPlugin(),
-        ]
-    }
 }

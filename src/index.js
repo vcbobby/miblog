@@ -1,3 +1,3 @@
-import './css/main.css';
-import './css/media-queries.css';
-import './css/vars.styl';
+import '@styles/main.css';
+import '@styles/media-queries.css';
+import '@styles/vars.styl';
