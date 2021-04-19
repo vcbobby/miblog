@@ -9,24 +9,14 @@
     <title>Blog</title>
 </head>
 <body class="container-blogs">
-    <header class="header">
-        <section class="red-social red-social--blog">
-            <div class="social">
-                <a href="/"><img class="icon" src="assets/icons/logo-de-facebook.png" alt="Logo de Fb" title="Facebook personal"></a>
-                <a href="/"><img class="icon" src="assets/icons/gorjeo.png" alt="Logo de twitter" title="Twitter personal"></a>
-                <a href="/"><img class="icon" src="assets/icons/instagram.png" alt="Logo de instagram" title="Instagram personal"></a>
-            </div>
-        </section>
-        <nav class="nav nav--blog">
-            <section class="logo">
-                <a href="/"><img src="assets/icons/blogger.png" alt="Logo" title="Mi blog"></a>
-                <h1>Mi blog</h1>
-            </section>
-            <section class="profile">
-                <a href="./blogs.html" title="Perfil">Otros blogs</a>
-            </section>
-        </nav>
-    </header>
+    <my-header
+        fb="assets/icons/logo-de-facebook.png"
+        twitter="assets/icons/gorjeo.png"
+        ins="assets/icons/instagram.png"
+        logo="assets/icons/blogger.png"
+        hrf="./blogs.html"
+        link="Otros blogs"
+    ></my-header>
     <main class="main--miBlog">
         <section class="miBlog--info-section">
             <img src="assets/imgs/desk.jpg" alt="Este es un blog nuevo" title="Este es un blog nuevo">
@@ -57,8 +47,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </footer>
+    <my-footer
+        pie="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    ></my-footer>
 </body>
 </html>
