@@ -5,7 +5,7 @@ class myHeader extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ["title", "link", "hrf", "twitter", "fb", "ins", "logo"]
+        return ["title", "link", "hrf", "twitter", "fb", "ins", "logo", "home"]
     }
     attributeChangedCallback(attribute, oldval, newval) {
         if(attribute === "title") {
@@ -31,6 +31,9 @@ class myHeader extends HTMLElement {
         if(attribute === "logo") {
             this.logo = newval
         }
+        if(attribute === "home") {
+            this.home = newval
+        }
     }
     getTemplate() {
         const template = document.createElement('template')
@@ -38,14 +41,14 @@ class myHeader extends HTMLElement {
         <header class="header">
         <section class="red-social">
             <div class="social">
-                <a href="/dist"><img class="icon" src="${this.fb}" alt="Logo de Fb" title="Facebook personal"></a>
-                <a href="/dist"><img class="icon" src="${this.twitter}" alt="Logo de twitter" title="Twitter personal"></a>
-                <a href="/dist"><img class="icon" src="${this.ins}" alt="Logo de instagram" title="Instagram personal"></a>
+                <a href="${this.home}"><img class="icon" src="${this.fb}" alt="Logo de Fb" title="Facebook personal"></a>
+                <a href="${this.home}"><img class="icon" src="${this.twitter}" alt="Logo de twitter" title="Twitter personal"></a>
+                <a href="${this.home}"><img class="icon" src="${this.ins}" alt="Logo de instagram" title="Instagram personal"></a>
             </div>
         </section>
         <nav class="nav">
             <section class="logo">
-                <a href="/dist"><img src="${this.logo}" alt="Logo" title="Mi blog"></a>
+                <a href="${this.home}"><img src="${this.logo}" alt="Logo" title="Mi blog"></a>
                 <h1>Mi blog</h1>
             </section>
             <section class="profile">
