@@ -8,3 +8,5 @@ Tambien esta totalmente optimizado con webpack para trabajar con Javascript
 
 
 el sitio web del blog es https://miblogla.netlify.app/
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a783ea66-c043-494c-82ef-539d62ad550c/deploy-status)](https://app.netlify.com/sites/miblogla/deploys)
